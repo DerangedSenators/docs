@@ -24,6 +24,7 @@ doxygen ../../Doxyfile
 ./../../doxygen/doxybook2 --input xml/ --output ../../docs/PlayerLink --config ../../doxygen/doxybookcfg_playerlink.json
 cd ..
 cd copsandrobbers
+find ./CopsAndRobbers -mindepth 1 ! -regex '^./CopsAndRobbers/Assets/Scripts\(/.*\)?' -delete
 doxygen ../../Doxyfile
 ./../../doxygen/doxybook2 --input xml/ --output ../../docs/"Cops And Robbers" --config ../../doxygen/doxybookcfg_copsandrobbers.json
 cd ../..
