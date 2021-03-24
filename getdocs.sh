@@ -26,7 +26,7 @@ cd ..
 cd copsandrobbers
 find ./CopsAndRobbers -mindepth 1 ! -regex '^./CopsAndRobbers/Assets/Scripts\(/.*\)?' -delete
 doxygen ../../Doxyfile
-./../../doxygen/doxybook2 --input xml/ --output ../../docs/"Cops And Robbers" --config ../../doxygen/doxybookcfg_copsandrobbers.json
+./../../doxygen/doxybook2 --input xml/ --output ../../docs/"CopsAndRobbers" --config ../../doxygen/doxybookcfg_copsandrobbers.json
 cd ../..
 cd docs
 mkdir Overview
@@ -40,7 +40,7 @@ rm -r docs/PlayerLink/Pages
 rm -r docs/"Cops And Robbers"/Files
 rm -r docs/"Cops And Robbers"/Pages
 mv -v codedoc/playerlink/docs/* docs/PlayerLink/
-mv -v codedoc/copsandrobbers/docs/* docs/"Cops And Robbers"/
+mv -v codedoc/copsandrobbers/docs/* docs/"CopsAndRobbers"/
 cp -R doxygen/overlays/. docs/
 mkdocs build --site-dir Documentation
 echo "Cleaning up"
