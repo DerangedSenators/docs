@@ -36,9 +36,6 @@ mv -v codedoc/playerlink/docs/* docs/PlayerLink/
 mv -v codedoc/copsandrobbers/docs/* docs/"CopsAndRobbers"/
 cp -R doxygen/overlays/. docs/
 mkdocs build --site-dir Documentation
-echo "Cleaning up"
-rm -r docs
-rm -r codedoc
 mkdir public
-mv * public
+mv Documentation public
 echo "All Done!"
