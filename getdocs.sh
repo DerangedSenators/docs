@@ -35,7 +35,4 @@ rm -r docs/"Cops And Robbers"/Pages
 mv -v codedoc/playerlink/docs/* docs/PlayerLink/
 mv -v codedoc/copsandrobbers/docs/* docs/"CopsAndRobbers"/
 cp -R doxygen/overlays/. docs/
-mkdocs build --site-dir Documentation
-mkdir public
-mv Documentation public
 echo "All Done!"
