@@ -28,6 +28,12 @@ find ./CopsAndRobbers -mindepth 1 ! -regex '^./CopsAndRobbers/Assets/Scripts\(/.
 doxygen ../../Doxyfile
 ./../../doxygen/doxybook2 --input xml/ --output ../../docs/"CopsAndRobbers" --config ../../doxygen/doxybookcfg_copsandrobbers.json
 cd ../..
+cd docs
+mkdir Overview
+cd Overview
+git clone https://github.com/derangedsenators/collaboration.git
+rm -r collaboration/.git
+cd ../..
 echo "Done... Building Site with MKDOWN-material"
 rm -r docs/PlayerLink/Files
 rm -r docs/PlayerLink/Pages
