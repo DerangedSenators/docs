@@ -20,9 +20,12 @@ jobs:
           sudo chmod +x getdocs.sh 
           sudo chmod +x doxygen/doxybook2
           sudo ./getdocs.sh
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@3.7.1
-        with:
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: public/Documentation # The folder the action should deploy.
-          CLEAN: true # Automatically remove deleted files from the deploy branch
+      - name: Deploy docs
+        uses: mhausenblas/mkdocs-deploy-gh-pages@master
+        # Or use mhausenblas/mkdocs-deploy-gh-pages@nomaterial to build without the mkdocs-material theme
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CUSTOM_DOMAIN: docs.derangedsenators.me
+          CONFIG_FILE: mkdocs.yml
+          EXTRA_PACKAGES: build-base
+          # GITHUB_DOMAIN: github.myenterprise.com          
